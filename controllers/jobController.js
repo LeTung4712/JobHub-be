@@ -348,7 +348,7 @@ exports.deleteJob = asyncHandler(async (req, res, next) => {
     );
   }
 
-  await job.remove();
+  await job.deleteOne();
 
   res.status(200).json({
     success: true,
